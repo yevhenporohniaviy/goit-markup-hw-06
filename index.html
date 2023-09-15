@@ -18,14 +18,7 @@
     <body>
         <header class="header">
             <div class="container header-container">
-                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd"
-                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                            clip-rule="evenodd"></path>
-                    </svg>
-                </button>
-                <nav class="navbar menu">
+                <nav class="navbar ">
                     <a class="logo link" href="./index.html">
                         Web<span class="logo-head">Studio</span>
                     </a>
@@ -57,6 +50,14 @@
                         </li>
                     </ul>
                 </address>
+
+                <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
             </div>
         </header>
         <main>
@@ -136,7 +137,9 @@
                     <h2 class="sub-title">Our Team</h2>
                     <ul class="list team-list">
                         <li class="team-list-item">
-                            <img src="./images/guerrero.jpg" alt="Mark Guerrero" width="264" height="260" />
+                            <img srcset="./images/team/our-team-1.jpg 1x, ./images/team/our-team-1@2x.jpg 2x"
+                                src="./images/team/our-team-1.jpg" alt="Mark Guerrero" width="264" height="260" />
+
                             <div class="person-info">
                                 <h3 class="title">Mark Guerrero</h3>
                                 <p class="text">Product Designer</p>
@@ -173,7 +176,8 @@
                             </div>
                         </li>
                         <li class="team-list-item">
-                            <img src="./images/ford.jpg" alt="Tom Ford" width="264" height="260" />
+                            <img srcset="./images/team/our-team-2.jpg 1x, ./images/team/our-team-2@2x.jpg 2x" src="./images/team/our-team-2.jpg"
+                                alt="Mark Guerrero" width="264" height="260" />
                             <div class="person-info">
                                 <h3 class="title">Tom Ford</h3>
                                 <p class="text">Frontend Developer</p>
@@ -210,7 +214,8 @@
                             </div>
                         </li>
                         <li class="team-list-item">
-                            <img src="./images/garcia.jpg" alt="Camila Garcia" width="264" height="260" />
+                            <img srcset="./images/team/our-team-3.jpg 1x, ./images/team/our-team-3@2x.jpg 2x" src="./images/team/our-team-3.jpg"
+                                alt="Mark Guerrero" width="264" height="260" />
                             <div class="person-info">
                                 <h3 class="title">Camila Garcia</h3>
                                 <p class="text">Marketing</p>
@@ -247,7 +252,8 @@
                             </div>
                         </li>
                         <li class="team-list-item">
-                            <img src="./images/wilson.jpg" alt="Daniel Wilson" width="264" height="260" />
+                            <img srcset="./images/team/our-team-4.jpg 1x, ./images/team/our-team-4@2x.jpg 2x" src="./images/team/our-team-4.jpg"
+                                alt="Mark Guerrero" width="264" height="260" />      
                             <div class="person-info">
                                 <h3 class="title">Daniel Wilson</h3>
                                 <p class="text">UI Designer</p>
@@ -465,40 +471,72 @@
 
         <div class="menu-container js-menu-container" id="mobile-menu">
             <button class="menu-toggle js-close-menu">
-                <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                    <path fill-rule="evenodd"
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                        clip-rule="evenodd"></path>
+                <svg class="menu-icon" width="8" height="8">
+                    <use href="./images/icons.svg#modal-close"></use>
                 </svg>
             </button>
         
-            <ul class="list mobile-menu">
-                <li class="header-list-item">
-                    <a href="./index.html" class="link current list-item ">
-                        Studio
-                    </a>
+            <!--Mobile Navigations-->
+            <ul class="mobile-menu-list list">
+                <li class="mobile-menu-item">
+                    <a class="mobile-menu-link link mobile-menu-current" href="./index.html">Studio</a>
                 </li>
-                <li class="header-list-item">
-                    <a href="./portfolio.html" class="link list-item">
-                        Portfolio
-                    </a>
+                <li class="mobile-menu-item">
+                    <a class="mobile-menu-link link" href="./portfolio.html">Portfolio</a>
                 </li>
-                <li class="header-list-item">
-                    <a href="" class="link list-item">
-                        Contacts
-                    </a>
+                <li class="mobile-menu-item">
+                    <a class="mobile-menu-link link" href="#">Contacts</a>
                 </li>
             </ul>
-            <address class="address ">
-                <ul class="list address-list">
-                    <li class="address-list-item">
-                        <a class="address-item link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+        
+            <div>
+                <!--Mobile Contacts-->
+                <address class="mobile-contacts">
+                    <ul class="mobile-contacts-list list">
+                        <li class="mobile-contacts-item">
+                            <a class="mobile-contacts-link highlight link" href="tel:+110001111111" target="_blank"
+                                rel="noopener noreferrer">+11 (000) 111-11-11</a>
+                        </li>
+                        <li class="mobile-contacts-item">
+                            <a class="mobile-contacts-link link" href="mailto:info@devstudio.com" target="_blank"
+                                rel="noopener noreferrer">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                </address>
+                <!--Mobile Socials-->
+                <ul class="mobile-socials-list list">
+                    <li class="mobile-socials-item">
+                        <a class="mobile-socials-link" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-socials-link_box" height="24" width="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                
+                            </svg>
+                        </a>
                     </li>
-                    <li class="address-list-item">
-                        <a class="address-item link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    <li class="mobile-socials-item">
+                        <a class="mobile-socials-link" href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-socials-link_box" height="24" width="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-socials-item">
+                        <a class="mobile-socials-link" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-socials-link_box" height="24" width="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mobile-socials-item">
+                        <a class="mobile-socials-link" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <svg class="team-socials-link_box" height="24" width="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
-            </address>
+            </div>
+        
         </div>
     
         <script src="./js/modal.js"></script>
