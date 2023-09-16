@@ -158,7 +158,7 @@ input, textarea {
     @media screen and (min-width: 768px) {
         display: flex;
          text-align: center;
-        gap: 12px;
+        gap: 40px;
     }
 
     /* Desktop */
@@ -198,10 +198,16 @@ input, textarea {
 .header .header-list .header-list-item .list-item {
     display: block;
     padding: 24px 0;
+    
 }
-
+.header .address-item {
+   
+    @media (max-width:1558px) {
+        font-size: 12px;
+    }
+}
 .header .list-item, .header .address-item {   
-    line-height: 24px;
+    line-height: 1.6;
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
@@ -237,10 +243,10 @@ input, textarea {
     text-align: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 0 auto;
+    
 
     @media screen and (min-width: 768px) {
-        margin: 0 100px;
+        gap:24px;
         justify-content: flex-start;
         text-align: start;
     }
@@ -248,15 +254,16 @@ input, textarea {
         display: flex;
         align-items: baseline;
         flex-wrap: nowrap;
-        margin: 0 auto;
     }
 }
 .footer-logo-text {
     margin-bottom: 72px;
     
-
-    @media screen and (min-width: 1158px) {
+    @media screen and (min-width: 768px) {
         margin-bottom: 0;
+    }
+    @media screen and (min-width: 1158px) {
+       
         margin-right: 120px;
     }
 }
@@ -549,7 +556,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        margin: 0 100px;
     }
 
     @media screen and (min-width: 1158px) {
@@ -560,7 +566,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         justify-content: center;
         column-gap: 24px;
         row-gap: 0;
-        margin: 0 auto;
     }
 }
 .team-section .team-list .team-list-item {
@@ -681,7 +686,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         row-gap: 72px;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 0 100px;
     }
 
     @media screen and (min-width: 1158px) {
@@ -690,7 +694,6 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
         row-gap: 0px;
         flex-wrap: nowrap;
         justify-content: center;
-        margin: 0 auto;
     }
 }
 .customers-list .customers-list-item {
@@ -1338,4 +1341,10 @@ screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
 .mobile-socials-link:hover,
 .mobile-socials-link:focus {
     background-color: var(--iris);
+}
+
+.team-container, .customers-container, .footer-container {
+    @media (min-width: 768px) and (max-width: 1158px) {
+        max-width: 584px;
+    }
 }
