@@ -293,7 +293,7 @@ input, textarea {
 }
 
 .hero-section .title {
-    max-width: 496px;
+    max-width: 320px;
     color: var(--white);
     text-align: center;
     font-size: 36px;
@@ -302,6 +302,7 @@ input, textarea {
     margin-bottom:48px;
 
     @media screen and (min-width: 768px) {
+        max-width: 496px;
         font-size: 56px;
         line-height: 60px;
         letter-spacing: 1.12px;
@@ -317,49 +318,67 @@ input, textarea {
 .hero-section {
     margin: 0 auto;
     display: flex;
-    padding: 188px 0;
+    padding: 112px 0;
     max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../images/hero/hero-bg-mobile.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-    @media screen and (min-width: 768px) {
-            background-image: unset;
-        }
-    
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../images/hero/hero-bg-mobile@2x.jpg');
+@media screen and (min-resolution: 192dpi) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (max-width: 767px),
+screen and (min-device-pixel-ratio: 2) and (max-width: 767px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url('../images/hero/hero-bg-mobile@2x.jpg');
     }
+}
 
-    @media screen and (min-width: 768px) {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../images/hero/hero-bg-tablet.jpg');   
+@media screen and (min-width: 768px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url('../images/hero/hero-bg-tablet.jpg');
     }
+}
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-            background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../images/hero/hero-bg-tablet@2x.jpg');
+@media screen and (min-resolution: 192dpi) and (min-width: 768px),
+screen and (min-resolution: 2dppx) and (min-width: 768px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 768px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url('../images/hero/hero-bg-tablet@2x.jpg');
     }
-    
-    @media screen and (min-width: 1158px) {
+}
+
+@media screen and (min-width: 1158px) {
+    .hero-section {
         padding: 188px 0;
-        background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../images/hero/hero-bg-desktop.jpg');
-        background-size: 1440px,
-        1440px;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url('../images/hero/hero-bg-desktop.jpg');
     }
+}
 
-    @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-                background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url('../images/hero/hero-bg-desktop@2x.jpg');
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px),
+screen and (min-resolution: 2dppx) and (min-width: 1158px),
+screen and (min-device-pixel-ratio: 2) and (min-width: 1158px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url('../images/hero/hero-bg-desktop@2x.jpg');
     }
 }
 
 .strategy-section {
-    padding: 120px 0;
+    padding: 96px 0;
+
+    @media screen and (min-width: 1158px) {
+        padding: 120px 0;
+    }
 }
 .strategy-section .img-box {
     display: none;
@@ -420,10 +439,23 @@ input, textarea {
 .strategy-section .title {
     margin-bottom: 8px;
     color: var(--navyblue);
-    font-size: 20px;
-    font-weight: 500;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 1.2;
-    letter-spacing: 0.025em;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+
+    @media screen and (min-width: 768px) {
+        text-align: left;
+    }
+
+    @media screen and (min-width: 1158px) {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0.025em;
+    }
 }
 .team-section .text,
 .strategy-section .text {
@@ -488,8 +520,12 @@ input, textarea {
     text-transform: capitalize;
 }
 .team-section {
-    padding: 120px 0;
     background-color: var(--cloud);
+    padding: 96px 0;
+    
+    @media screen and (min-width: 1158px) {
+        padding: 120px 0;
+    }
 }
 .team-section .sub-title {
     margin-bottom: 72px;
@@ -502,7 +538,8 @@ input, textarea {
 }
 .team-section .team-list {
     display: flex;
-    gap: 24px;
+    column-gap: 24px;
+    row-gap: 72px;
     justify-content: center;
     flex-wrap: wrap;
 
@@ -512,8 +549,6 @@ input, textarea {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        column-gap: 24px;
-        row-gap: 64px;
         margin: 0 100px;
     }
 
@@ -618,7 +653,11 @@ input, textarea {
 }
 
 .section-customers {
-    padding: 120px 0;
+    padding: 96px 0;
+    
+    @media screen and (min-width: 1158px) {
+        padding: 120px 0;
+    }
 }
 .section-customers .sub-title {
     margin-bottom: 72px;
@@ -1159,7 +1198,7 @@ input, textarea {
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 32px;
+    padding: 80px 35px 40px 40px;
     background-color: var(--white);
     z-index: 999;
 
@@ -1261,10 +1300,14 @@ input, textarea {
 
 .highlight {
     color: var(--iris, #4d5ae5);
-    font-size: 30px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 0.72px;
+
+    @media screen and (min-width: 1158px) {
+        font-size: 30px;
+    }
 }
 
 /* Mobile Socials */
